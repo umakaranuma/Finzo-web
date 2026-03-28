@@ -18,6 +18,11 @@ const barlow = Barlow({
 export const metadata: Metadata = {
   title: "Finzo — Smart Personal Money Manager",
   description: "Track your expenses, manage notes, todos and reminders all in one place.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/images/launcher_icon.jpg",
+  },
 };
 
 import Navbar from "@/components/Navbar";
@@ -28,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className={`${lexend.variable} ${barlow.variable}`}>
         <Navbar />
         {children}
