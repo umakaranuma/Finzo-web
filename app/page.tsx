@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero";
+import Marquee from "@/components/Marquee";
 import Features from "@/components/Features";
+import StatsBand from "@/components/StatsBand";
 import Screenshots from "@/components/Screenshots";
 import HowItWorks from "@/components/HowItWorks";
 import HelpCenter from "@/components/HelpCenter";
@@ -12,7 +14,9 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Hero />
+      <Marquee />
       <ScrollReveal><Features /></ScrollReveal>
+      <StatsBand />
       <ScrollReveal><Screenshots /></ScrollReveal>
       <ScrollReveal><HowItWorks /></ScrollReveal>
       <ScrollReveal><HelpCenter /></ScrollReveal>

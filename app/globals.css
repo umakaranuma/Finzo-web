@@ -1,19 +1,19 @@
 :root {
   --or: #F5631A;
-  --or2: #FF7A35;
+  --or2: #FF7C35;
+  --or3: #FF9A5C;
   --or-pale: rgba(245, 99, 26, 0.1);
-  --or-glow: rgba(245, 99, 26, 0.22);
-  --dk: #0B0A09;
-  --dk2: #141210;
-  --dk3: #1C1917;
-  --dk4: #242018;
-  --text: #F3EDE6;
-  --muted: rgba(243, 237, 230, 0.52);
-  --dim: rgba(243, 237, 230, 0.28);
-  --border: rgba(255, 255, 255, 0.06);
-  --border2: rgba(255, 255, 255, 0.11);
-  --border3: rgba(255, 255, 255, 0.18);
-  --card: rgba(255, 255, 255, 0.035);
+  --or-glow: rgba(245, 99, 26, 0.28);
+  --bg: #0A0907;
+  --bg2: #111009;
+  --bg3: #181410;
+  --bg4: #1F1A12;
+  --t: #F2EBE1;
+  --tm: rgba(242, 235, 225, 0.55);
+  --td: rgba(242, 235, 225, 0.28);
+  --b: rgba(255, 255, 255, 0.06);
+  --b2: rgba(255, 255, 255, 0.1);
+  --b3: rgba(255, 255, 255, 0.16);
 }
 
 * {
@@ -28,16 +28,16 @@ html {
 }
 
 body {
-  font-family: var(--font-jakarta), sans-serif;
-  background: var(--dk);
-  color: var(--text);
+  font-family: var(--font-barlow), sans-serif;
+  background: var(--bg);
+  color: var(--t);
   overflow-x: hidden;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, .font-syne {
-  font-family: var(--font-syne), sans-serif;
+h1, h2, h3, h4 {
+  font-family: var(--font-lexend), sans-serif;
 }
 
 a {

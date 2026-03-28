@@ -1,106 +1,146 @@
-.sec {
-  padding: 96px 64px;
-  background: linear-gradient(160deg, rgba(245, 99, 26, 0.09) 0%, rgba(245, 99, 26, 0.02) 100%);
-  border-top: 1px solid rgba(245, 99, 26, 0.1);
+.downloadCta {
+  padding: 140px 0;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
   text-align: center;
 }
 
-.card {
-  max-width: 800px;
-  margin: 0 auto;
+.fctaBigBx {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.1;
 }
 
-.appIcon {
-  border-radius: 20px;
-  box-shadow: 0 10px 40px var(--or-glow);
-  margin-bottom: 24px;
+.fctaBig {
+  font-family: var(--font-lexend), sans-serif;
+  font-size: 18vw;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(245, 99, 26, 0.2);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.container {
+  width: 91%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaBox {
+  width: 100%;
+  max-width: 900px;
+  padding: 80px 40px;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 99, 26, 0.3);
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(245, 99, 26, 0.5), transparent, rgba(245, 99, 26, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-barlow), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--or);
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
 }
 
 .title {
-  font-family: var(--font-syne), sans-serif;
-  font-size: clamp(30px, 4vw, 48px);
+  font-family: var(--font-lexend), sans-serif;
+  font-size: clamp(38px, 5vw, 56px);
   font-weight: 800;
+  color: var(--t);
   line-height: 1.1;
-  letter-spacing: -1.2px;
-  margin-bottom: 14px;
-  color: var(--text);
-}
-
-.title em {
-  font-style: normal;
-  color: var(--or);
+  letter-spacing: -0.02em;
+  margin: 0 auto 24px;
 }
 
 .subtitle {
-  font-size: 16px;
-  color: var(--muted);
+  font-family: var(--font-barlow), sans-serif;
+  font-size: 19px;
+  color: var(--tm);
+  line-height: 1.6;
   max-width: 580px;
-  margin: 0 auto 36px;
-  line-height: 1.75;
+  margin: 0 auto 48px;
 }
 
-.btns {
+.fctaBtns {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 16px;
 }
 
-.gplayBtn {
+.fctaBtnA {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-  background: var(--dk2);
-  border: 1px solid var(--border2);
-  color: var(--text);
-  text-decoration: none;
-  padding: 18px 32px;
-  border-radius: 18px;
-  transition: all 0.25s;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
-}
-
-.gplayBtn:hover {
-  border-color: rgba(245, 99, 26, 0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(245, 99, 26, 0.18);
-}
-
-.gplayIcon {
-  width: 36px;
-  height: 36px;
-  flex-shrink: 0;
+  gap: 14px;
+  background: transparent;
+  border: 1.5px solid var(--or);
   color: #fff;
+  padding: 18px 44px;
+  border-radius: 100px;
+  font-family: var(--font-barlow), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.gplayIcon svg {
-  fill: currentColor;
+.fctaBtnA:hover {
+  background: var(--or-pale);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--or-glow);
 }
 
-.gplayText {
-  text-align: left;
+.fctaBtnA svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--or);
 }
 
-.gplayTop {
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 0.3px;
-}
-
-.gplayMain {
-  font-family: var(--font-syne), sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--text);
-}
-
-.comingSoon {
-  font-size: 12px;
-  color: var(--dim);
-}
-
-@media (max-width: 1100px) {
-  .sec {
-    padding: 72px 24px;
+@media (max-width: 768px) {
+  .downloadCta {
+    padding: 80px 0;
+  }
+  .fctaBtns {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .fctaBtnA, .fctaBtnB {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+  .fctaBig {
+    font-size: 25vw;
   }
 }

@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Syne, Plus_Jakarta_Sans } from "next/font/google";
+import { Lexend, Barlow } from "next/font/google";
 import "./globals.css";
 
-const syne = Syne({
+const lexend = Lexend({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-  variable: "--font-syne",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-lexend",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-jakarta",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-barlow",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${syne.variable} ${jakarta.variable}`}>
+      <body className={`${lexend.variable} ${barlow.variable}`}>
         <Navbar />
         {children}
       </body>
