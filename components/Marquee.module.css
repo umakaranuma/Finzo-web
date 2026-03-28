@@ -1,0 +1,47 @@
+.marquee {
+  width: 100%;
+  padding: 24px 0;
+  background: var(--bg2);
+  border-top: 1px solid var(--b);
+  border-bottom: 1px solid var(--b);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.item span {
+  font-family: var(--font-lexend), sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--t);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  opacity: 0.6;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--or);
+  opacity: 0.4;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

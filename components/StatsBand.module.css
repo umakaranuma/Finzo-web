@@ -1,0 +1,95 @@
+.statsBand {
+  padding: 80px 0;
+  background: var(--bg2);
+  border-top: 1px solid var(--b);
+  border-bottom: 1px solid var(--b);
+  position: relative;
+}
+
+.container {
+  width: 91%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icoBx {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: var(--bg3);
+  border: 1px solid var(--b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icoBx svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--td);
+  transition: all 0.3s ease;
+}
+
+.item:hover .icoBx {
+  border-color: var(--or-glow);
+  background: var(--or-pale);
+  transform: scale(1.05);
+}
+
+.item:hover .icoBx svg {
+  fill: var(--or);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info strong {
+  font-family: var(--font-lexend), sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--t);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.txt h5 {
+  font-family: var(--font-lexend), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--tm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.txt p {
+  font-family: var(--font-barlow), sans-serif;
+  font-size: 11px;
+  color: var(--td);
+  margin-top: 1px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
