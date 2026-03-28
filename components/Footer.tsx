@@ -21,10 +21,10 @@ const Footer = () => {
           <div className={styles.fnavCols}>
             <div className={styles.fcol}>
               <h4>Navigation</h4>
-              <Link href="#features">Features</Link>
-              <Link href="#screenshots">Gallery</Link>
-              <Link href="#how-it-works">Workflow</Link>
-              <Link href="#help">Support Center</Link>
+              <Link href="/features">Features</Link>
+              <Link href="/screenshots">Gallery</Link>
+              <Link href="/how-it-works">Workflow</Link>
+              <Link href="/help">Support Center</Link>
             </div>
             <div className={styles.fcol}>
               <h4>Legal</h4>
