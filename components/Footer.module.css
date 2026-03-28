@@ -1,126 +1,126 @@
 .footer {
-  padding: 100px 0 50px;
+  padding: 120px 0 60px;
   background: var(--bg);
-  border-top: 1px solid var(--b);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--b) 20%, 
+    var(--or) 50%, 
+    var(--b) 80%, 
+    transparent 100%
+  );
 }
 
 .container {
   width: 91%;
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .ftop {
   display: flex;
   justify-content: space-between;
-  gap: 80px;
-  margin-bottom: 80px;
+  gap: 120px;
+  margin-bottom: 100px;
 }
 
 .flogoCol {
-  flex: 1.5;
+  flex: 1.2;
 }
 
 .flogo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   font-family: var(--font-lexend), sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--t);
-  margin-bottom: 24px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.flogo:hover {
+  transform: translateX(5px);
 }
 
 .flogoImg {
-  width: 36px;
-  height: 36px;
-  background: var(--or);
-  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 15px var(--or-glow);
+  box-shadow: 0 8px 25px var(--or-glow);
 }
 
-.flogoImg svg {
-  width: 18px;
-  height: 18px;
-  fill: #fff;
+.ficonImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 
 .ftagline {
   font-family: var(--font-barlow), sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--tm);
-  line-height: 1.6;
-  max-width: 300px;
-  margin-bottom: 30px;
-}
-
-.fsocials {
-  display: flex;
-  gap: 12px;
-}
-
-.fsc {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--bg2);
-  border: 1px solid var(--b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-family: var(--font-lexend), sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--tm);
-  transition: all 0.3s ease;
-}
-
-.fsc:hover {
-  background: var(--or);
-  color: #fff;
-  border-color: var(--or);
-  transform: translateY(-3px);
+  line-height: 1.7;
+  max-width: 400px;
+  opacity: 0.8;
 }
 
 .fnavCols {
-  flex: 2;
+  flex: 1.5;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
 }
 
 .fcol h4 {
   font-family: var(--font-lexend), sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--t);
-  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--or);
+  margin-bottom: 30px;
 }
 
 .fcol a {
   display: block;
   font-family: var(--font-barlow), sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--tm);
   text-decoration: none;
-  margin-bottom: 14px;
-  transition: all 0.2s ease;
+  margin-bottom: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.7;
 }
 
 .fcol a:hover {
-  color: var(--or);
-  padding-left: 5px;
+  color: var(--t);
+  opacity: 1;
+  padding-left: 8px;
 }
 
 .fbottom {
   border-top: 1px solid var(--b);
-  padding-top: 40px;
+  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,42 +129,44 @@
 
 .fcopy {
   font-family: var(--font-barlow), sans-serif;
-  font-size: 14.5px;
+  font-size: 14px;
   color: var(--td);
 }
 
 .fextra span {
   font-family: var(--font-barlow), sans-serif;
-  font-size: 14.5px;
+  font-size: 14px;
   color: var(--td);
+  font-style: italic;
+  opacity: 0.6;
 }
 
 @media (max-width: 1024px) {
   .ftop {
     flex-direction: column;
-    gap: 60px;
+    gap: 80px;
+    text-align: center;
+    align-items: center;
   }
   .flogoCol {
     text-align: center;
   }
   .ftagline {
-    margin: 0 auto 30px;
-  }
-  .fsocials {
-    justify-content: center;
+    margin: 0 auto;
   }
   .fnavCols {
     width: 100%;
+    gap: 40px;
   }
 }
 
 @media (max-width: 600px) {
   .fnavCols {
     grid-template-columns: 1fr;
-    text-align: center;
   }
   .fbottom {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 }

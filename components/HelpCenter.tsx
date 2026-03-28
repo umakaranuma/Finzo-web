@@ -37,8 +37,8 @@ const HelpCenter = () => {
             <p>Download Finzo today and take control of your financial future. It's free, secure, and easy to use.</p>
           </div>
           <div className={styles.fhbRight}>
-            <a href="https://play.google.com/store" className={styles.fhbBtn}>
-              Go To Help Center
+            <a href="https://play.google.com/store/apps/details?id=com.fynux.finzo&pcampaignid=web_share" className={styles.fhbBtn}>
+              Get it on Play Store
               <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
             </a>
           </div>

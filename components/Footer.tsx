@@ -9,42 +9,28 @@ const Footer = () => {
           <div className={styles.flogoCol}>
             <Link href="/" className={styles.flogo}>
               <div className={styles.flogoImg}>
-                <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" /></svg>
+                <img src="/images/launcher_icon.jpg" alt="Finzo Logo" className={styles.ficonImg} />
               </div>
               <span>Finzo</span>
             </Link>
             <p className={styles.ftagline}>
-              The ultimate companion for your financial journey. Simple, secure, and offline.
+              The ultimate companion for your financial journey. Simple, secure, and 100% offline. No cloud, no trackers, just you and your data.
             </p>
-            <div className={styles.fsocials}>
-              <a href="#" className={styles.fsc}>Fb</a>
-              <a href="#" className={styles.fsc}>Tw</a>
-              <a href="#" className={styles.fsc}>Ig</a>
-              <a href="#" className={styles.fsc}>Li</a>
-            </div>
           </div>
 
           <div className={styles.fnavCols}>
             <div className={styles.fcol}>
-              <h4>App</h4>
+              <h4>Navigation</h4>
               <Link href="#features">Features</Link>
               <Link href="#screenshots">Gallery</Link>
               <Link href="#how-it-works">Workflow</Link>
-              <Link href="#help">Support</Link>
-            </div>
-            <div className={styles.fcol}>
-              <h4>Company</h4>
-              <Link href="#">About Us</Link>
-              <Link href="#">Careers</Link>
-              <Link href="#">Press Kit</Link>
-              <Link href="#">Contact</Link>
+              <Link href="#help">Support Center</Link>
             </div>
             <div className={styles.fcol}>
               <h4>Legal</h4>
               <Link href="/privacy">Privacy Policy</Link>
               <Link href="/terms">Terms of Service</Link>
-              <Link href="#">Cookie Policy</Link>
-              <Link href="#">Security</Link>
+              <Link href="#">Security Protocol</Link>
             </div>
           </div>
         </div>
@@ -54,7 +40,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Finzo. All rights reserved.
           </div>
           <div className={styles.fextra}>
-            <span>Made with ❤️ for Financially Savvy People.</span>
+            <span>Crafted for privacy-conscious individuals.</span>
           </div>
         </div>
       </div>

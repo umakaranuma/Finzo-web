@@ -24,21 +24,22 @@
 }
 
 .logoBox {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
-  background: var(--or);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 14px var(--or-glow);
 }
 
-.logoBox svg {
-  width: 17px;
-  height: 17px;
-  fill: #fff;
+.lImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 
 .logoName {
   font-family: var(--font-barlow), sans-serif;
