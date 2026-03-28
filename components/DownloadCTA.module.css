@@ -1,6 +1,6 @@
 .downloadCta {
-  padding: 120px 0;
-  background: var(--bg);
+  padding: 140px 0;
+  background: transparent;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -15,7 +15,7 @@
   text-align: center;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.12;
+  opacity: 0.1;
 }
 
 .fctaBig {
@@ -23,29 +23,10 @@
   font-size: 18vw;
   font-weight: 800;
   color: transparent;
-  -webkit-text-stroke: 1px var(--t);
+  -webkit-text-stroke: 1px rgba(245, 99, 26, 0.2);
   line-height: 1;
   letter-spacing: -0.02em;
 }
-
-.rings {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.ring:nth-child(1) { width: 400px; height: 400px; }
-.ring:nth-child(2) { width: 800px; height: 800px; }
 
 .container {
   width: 91%;
@@ -53,6 +34,34 @@
   margin: 0 auto;
   position: relative;
   z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaBox {
+  width: 100%;
+  max-width: 900px;
+  padding: 80px 40px;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 99, 26, 0.3);
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(245, 99, 26, 0.5), transparent, rgba(245, 99, 26, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .eyebrow {
@@ -62,31 +71,25 @@
   font-weight: 700;
   color: var(--or);
   letter-spacing: 0.15em;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .title {
   font-family: var(--font-lexend), sans-serif;
-  font-size: clamp(34px, 4.5vw, 60px);
+  font-size: clamp(38px, 5vw, 56px);
   font-weight: 800;
   color: var(--t);
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   margin: 0 auto 24px;
-  max-width: 800px;
-}
-
-.title em {
-  font-style: normal;
-  color: var(--or);
 }
 
 .subtitle {
   font-family: var(--font-barlow), sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   color: var(--tm);
-  line-height: 1.7;
-  max-width: 600px;
+  line-height: 1.6;
+  max-width: 580px;
   margin: 0 auto 48px;
 }
 
@@ -94,58 +97,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 .fctaBtnA {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background: var(--or);
+  gap: 14px;
+  background: transparent;
+  border: 1.5px solid var(--or);
   color: #fff;
-  padding: 18px 36px;
+  padding: 18px 44px;
   border-radius: 100px;
   font-family: var(--font-barlow), sans-serif;
-  font-size: 15px;
-  font-weight: 750;
+  font-size: 16px;
+  font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 15px 35px var(--or-glow);
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .fctaBtnA:hover {
-  background: var(--or2);
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 45px rgba(245, 99, 26, 0.45);
+  background: var(--or-pale);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--or-glow);
 }
 
 .fctaBtnA svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.fctaBtnB {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: var(--bg2);
-  border: 1px solid var(--b);
-  color: var(--tm);
-  padding: 18px 36px;
-  border-radius: 100px;
-  font-family: var(--font-barlow), sans-serif;
-  font-size: 15px;
-  font-weight: 650;
-  cursor: default;
-  transition: all 0.3s ease;
-}
-
-.fctaBtnB svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  opacity: 0.6;
+  width: 22px;
+  height: 22px;
+  fill: var(--or);
 }
 
 @media (max-width: 768px) {

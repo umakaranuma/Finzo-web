@@ -16,31 +16,18 @@ const HelpCenter = () => {
           <div className={styles.fhelpCards}>
             <div className={styles.fhc}>
               <div className={styles.fhcIcon}>
-                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg>
               </div>
-              <h4>Documentation</h4>
-              <p>Explore our detailed guides and tutorials to master every feature.</p>
+              <h4>100% Privacy</h4>
+              <p>Your financial data never leaves your device. We use local storage to ensure your information stays yours.</p>
             </div>
             <div className={styles.fhc}>
               <div className={styles.fhcIcon}>
-                <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M11 20V12H7L13 2V10H17L11 20Z"/></svg>
               </div>
-              <h4>Community</h4>
-              <p>Join our active user base to share tips and get inspired.</p>
+              <h4>Local-First Speed</h4>
+              <p>No cloud syncing means zero lag. Access and manage your expenses instantly, anywhere, even without internet.</p>
             </div>
-          </div>
-        </div>
-
-        <div className={styles.fhelpBox}>
-          <div className={styles.fhbLeft}>
-            <h3>Ready to get started?</h3>
-            <p>Download Finzo today and take control of your financial future. It's free, secure, and easy to use.</p>
-          </div>
-          <div className={styles.fhbRight}>
-            <a href="https://play.google.com/store/apps/details?id=com.fynux.finzo&pcampaignid=web_share" className={styles.fhbBtn}>
-              Get it on Play Store
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
           </div>
         </div>
       </div>
