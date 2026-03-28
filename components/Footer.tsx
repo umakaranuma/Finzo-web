@@ -42,7 +42,7 @@ const Footer = () => {
             <div className={styles.fcol}>
               <h4>Legal</h4>
               <Link href="/privacy">Privacy Policy</Link>
-              <Link href="#">Terms of Service</Link>
+              <Link href="/terms">Terms of Service</Link>
               <Link href="#">Cookie Policy</Link>
               <Link href="#">Security</Link>
             </div>
